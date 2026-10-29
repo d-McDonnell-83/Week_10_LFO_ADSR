@@ -19,8 +19,8 @@ document.querySelector("#Start1").onclick = () =>
  
 
 osc1 = new OscillatorNode(ctx);
-osc1.frequency.value = 55;
-osc1.type = "sawtooth";
+osc1.frequency.value = 110;
+osc1.type = "sine";
 
 const osc1Gain = new GainNode(ctx);
 osc1Gain.gain.value = 0.4;
@@ -29,11 +29,11 @@ osc1.connect(osc1Gain);
 osc1Gain.connect(ctx.destination);
 
 mod = new OscillatorNode(ctx);
-mod.type = "square"
-mod.frequency.value = 4; // what happens if you push this above 20Hz?
+mod.type = "sine"
+mod.frequency.value = 335; // what happens if you push this above 20Hz?
 
 const modulatorGain = new GainNode(ctx);
-modulatorGain.gain.value = 50; // right now, the oscillator will "wobble" by 100 Hz
+modulatorGain.gain.value = 880; // right now, the oscillator will "wobble" by 100 Hz
 
 
 mod.connect(modulatorGain);
