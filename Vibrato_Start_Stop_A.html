@@ -30,10 +30,10 @@ osc1Gain.connect(ctx.destination);
 
 mod = new OscillatorNode(ctx);
 mod.type = "sine"
-mod.frequency.value = 335; // what happens if you push this above 20Hz?
+mod.frequency.value = 2; // what happens if you push this above 20Hz?
 
 const modulatorGain = new GainNode(ctx);
-modulatorGain.gain.value = 880; // right now, the oscillator will "wobble" by 100 Hz
+modulatorGain.gain.value = 10; // right now, the oscillator will "wobble" by 100 Hz
 
 
 mod.connect(modulatorGain);
