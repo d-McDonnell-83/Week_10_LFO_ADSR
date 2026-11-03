@@ -45,7 +45,7 @@ filter.Q.value = 20;
 
 filterMod = new OscillatorNode(ctx);
 filterMod.frequency.value = 0.5;
-filterMod.type = "square";
+filterMod.type = "sine";
 
 const filterModGain = new GainNode(ctx);
 filterModGain.gain.value = 1000
@@ -77,7 +77,7 @@ const slider1 = document.querySelector("#Modulator1");
         slider2.addEventListener("input", () => {
             ctx.resume();
         mod.frequency.value = Number(slider2.value);
-        document.querySelector("Modulator1").textContent = slider2.value;
+        document.querySelector("Index1").textContent = slider2.value;
 
 });
 
